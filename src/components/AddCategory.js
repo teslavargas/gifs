@@ -9,6 +9,7 @@ export const AddCategory = ({setCategories}) => {
     }
     const handdleSubmit = (e) => {
         e.preventDefault(); 
+        
         if(inputValue.trim().length > 2){
             setCategories(cats => [inputValue, ...cats]);
             setInputValue(''); 
@@ -18,6 +19,7 @@ export const AddCategory = ({setCategories}) => {
 
     return (
         <form onSubmit={handdleSubmit}>
+            <p> { inputValue } </p>
             <input type="text" value={inputValue} onChange={handdleInputChange}/>
         </form>
 

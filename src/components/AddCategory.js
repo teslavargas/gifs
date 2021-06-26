@@ -12,14 +12,14 @@ export const AddCategory = ({setCategories}) => {
         
         if(inputValue.trim().length > 2){
             setCategories(cats => [inputValue, ...cats]);
-            setInputValue(''); 
+            setInputValue('');  
         }
     
     }
 
     return (
         <form onSubmit={handdleSubmit}>
-            <p> { inputValue } </p>
+            <p>{inputValue}</p>
             <input type="text" value={inputValue} onChange={handdleInputChange}/>
         </form>
 
